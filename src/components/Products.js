@@ -5,7 +5,6 @@ import Unit from './Unit.js'
 function Products(){
     return(
 
-        
         <div>
             <h1 className='products'>Products</h1>
                 <div className='products'>

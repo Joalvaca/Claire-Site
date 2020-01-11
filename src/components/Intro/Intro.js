@@ -1,10 +1,11 @@
 import React from "react";
+import "./Intro.css"
 
 
 function Intro(){
     return(
         
-        <h1 className='header'>Intro</h1>
+        <h1 className='Intro'>Intro</h1>
        
     );
 }

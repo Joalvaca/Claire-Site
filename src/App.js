@@ -1,12 +1,10 @@
 import React from 'react';
-import Header from './components/Header.js'
-import Intro from './components/Intro.js'
-import Products from './components/Products.js'
-import Form from './components/Form.js'
-import Results from './components/Results'
-import './unit.css';
-import './header.css';
-import './products.css';
+import Header from './components/Header/Header.js'
+import Intro from './components/Intro/Intro.js'
+import Products from './components/Products/Products.js'
+import Form from './components/Form/Form.js'
+import Results from './components/Results/Results.js'
+
 
 
 

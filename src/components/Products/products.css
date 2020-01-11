@@ -1,0 +1,12 @@
+.products{
+    color:blue;
+    text-align: center;
+    height: 200px;
+    border:1px solid black;
+}
+.water-units{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+}

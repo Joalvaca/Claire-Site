@@ -1,0 +1,10 @@
+.header{
+    color:blue;
+    text-align: center;
+    height: 200px;
+    border:1px solid black;
+}
+.logo{
+    display:flex;
+    justify-content: flex-start;
+}

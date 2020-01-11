@@ -1,10 +1,11 @@
 import React from "react";
+import './Results.css'
 
 
 function Results(){
     return(
         
-        <h1 className='header'>Results</h1>
+        <h1 className='results'>Results</h1>
        
     );
 }

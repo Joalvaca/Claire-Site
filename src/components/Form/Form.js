@@ -5,7 +5,7 @@ import './Form.css';
 function Form(){
     return(
         
-        <h1 className='header'>Form</h1>
+        <h1 className='Form'>Form</h1>
        
     );
 }

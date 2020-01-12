@@ -6,10 +6,16 @@ function Header(){
     return(
         
         <div className='header'>
-            HEADER
-            <div className='logo'>
-                logo
-            </div>
+            <h1>HEADER</h1>
+                <div className='logo'>
+                    logo
+                 </div>
+                 <ul className='nav'>
+                     <li>Intro</li>
+                     <li>Products</li>
+                     <li>Form</li>
+                     <li>Contact</li>
+                 </ul>
 
         </div>
         

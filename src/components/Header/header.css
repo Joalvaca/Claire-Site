@@ -1,10 +1,16 @@
 .header{
-    color:blue;
+    color:white;
     text-align: center;
-    height: 200px;
+    height: 230px;
     border:1px solid black;
+    background-color: black;
 }
 .logo{
     display:flex;
     justify-content: flex-start;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+
 }

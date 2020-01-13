@@ -8,10 +8,10 @@ function Footer(){
         <div className='footer'>
             <h1>Footer</h1>
         <div className='footer-section'>
-            <div>Phone</div>
-            <div>Email</div>
-            <div>Linked</div>
-            <div>Copyright</div>
+            <div className='footer-icons'>Phone</div>
+            <div className='footer-icons'>Email</div>
+            <div className='footer-icons'>Linked</div>
+            <div className='footer-icons'>Copyright</div>
         </div>
 
         

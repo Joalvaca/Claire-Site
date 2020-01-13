@@ -5,6 +5,11 @@ import Products from './components/Products/Products.js'
 import Form from './components/Form/Form.js'
 import Results from './components/Results/Results.js'
 import Footer from './components/Footer/footer.js'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import {} from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab)
 
 
 class App extends React.Component {

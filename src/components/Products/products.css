@@ -1,7 +1,7 @@
 .products{
     color:black;
     text-align: center;
-    height: 200px;
+    height: 400px;
     border:1px solid black;
 }
 .water-units{
@@ -9,4 +9,9 @@
     justify-content: space-evenly;
     flex-direction: row;
 
+}
+.unit{
+    border: 1px solid black;
+    width:200px; 
+    height:200px;
 }

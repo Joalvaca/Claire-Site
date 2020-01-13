@@ -1,6 +1,15 @@
 .results{
     color:black;
     text-align: center;
-    height: 200px;
+    height: 350px;
     border:1px solid black;
+}
+.product-result{
+        border: 1px solid black;
+        width:200px; 
+        height:200px;
+}
+.result-section{
+    display: flex;
+    justify-content: center;
 }

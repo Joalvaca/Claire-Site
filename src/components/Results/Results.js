@@ -5,7 +5,18 @@ import './Results.css'
 function Results(){
     return(
         
-        <h1 className='results'>Results</h1>
+        <div className='results'>
+            <h1>results</h1>
+            <div className='result-section'>
+                <div className='product-result'>
+                    <h1>Unit</h1>
+                    <p>Image</p>
+                    <p>Description</p>
+                    <p>Price</p>
+                </div>
+                
+            </div>
+        </div>
        
     );
 }

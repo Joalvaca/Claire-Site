@@ -13,10 +13,30 @@ function Products(){
         <div className='products'>
             <h1>Products</h1>
                 <div className="water-units">
-                    <div>Unit</div>
-                    <div>Unit</div>
-                    <div>Unit</div>
-                    <div>Unit</div>
+                    <div className="unit">
+                        <h1>Unit</h1>
+                        <p>Image</p>
+                        <p>Description</p>
+                        <p>Price</p>
+                    </div>
+                    <div className="unit">
+                        <h1>Unit</h1>
+                        <p>Image</p>
+                        <p>Description</p>
+                        <p>Price</p>
+                    </div>
+                    <div className="unit">
+                        <h1>Unit</h1>
+                        <p>Image</p>
+                        <p>Description</p>
+                        <p>Price</p>
+                    </div>
+                    <div className="unit">
+                        <h1>Unit</h1>
+                        <p>Image</p>
+                        <p>Description</p>
+                        <p>Price</p>
+                    </div>
                 </div>    
         </div>
     );

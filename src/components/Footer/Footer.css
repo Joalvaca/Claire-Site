@@ -1,0 +1,14 @@
+.footer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    height: 200px;
+    border:1px solid black;
+}
+.footer-section{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import  './header.css';
+import Claire from './images/Claire-logo.png'
 
 
 function Header(){
@@ -7,7 +8,7 @@ function Header(){
 
             <nav>
                 <div className='nav'>
-                     <div className='logo'>Logo</div>
+                     <div className='logo'></div>
                         <div className='nav-main'>
                             <div className='nav-links'> <a href='#'>Intro</a></div>
                             <div className='nav-links'> <a href='#'>Products</a></div>
@@ -16,30 +17,7 @@ function Header(){
                         </div>
                 </div>
             </nav>
-       
-
-
-
-
-
-
-        
-        // <div className='header'>
-        //     <h1>HEADER</h1>
-        //         <div className='logo'>
-        //             logo
-        //          </div>
-        //          <ul className='nav'>
-        //              <li>Intro</li>
-        //              <li>Products</li>
-        //              <li>Form</li>
-        //              <li>Contact</li>
-        //          </ul>
-
-        // </div>
-        
-        
-        
+               
     );
 }
 

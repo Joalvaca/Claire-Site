@@ -1,7 +1,7 @@
 .products{
     color:black;
     text-align: center;
-    height: 450px;
+    height:600px;
     
 }
 .water-units{
@@ -14,16 +14,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 1px solid black;
-    width:300px; 
-    height:300px;
+    width:22%; 
+    height:500px;
     border-radius: 5px;
-    background-color: #aaaaaa;
+    background-color: #d8d8d8;
 }
-.image{
-    width:150px;
-    height:200px;
-}
+
 .product-text {
     font-size: 30px;
     letter-spacing: 3px;
@@ -31,4 +27,7 @@
 }
 .platinum{
     margin-top: 30px;
+}
+.unit-image{
+    max-width: 50px;
 }

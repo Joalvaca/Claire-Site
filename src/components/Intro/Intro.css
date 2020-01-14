@@ -6,7 +6,7 @@
     font-size: 15px;
 }
 .media-image{
-    width: 1000px;
+   max-width:1000px;
     border-radius: 10px;
 }
 .intro-text{

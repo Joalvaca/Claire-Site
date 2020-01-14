@@ -17,7 +17,8 @@ a{
 }
 .nav-links{
     font-size: 20px;
-    padding:25px; 
+    padding:25px;
+    letter-spacing:3px; 
 }
 .logo{
     padding:35px 35px; 

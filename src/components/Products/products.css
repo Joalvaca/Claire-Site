@@ -1,33 +1,49 @@
 .products{
     color:black;
     text-align: center;
-    height:600px;
-    
+    height:600px;   
 }
 .water-units{
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-
 }
 .unit{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    width:22%; 
-    height:500px;
+    justify-content: center;
+    padding: 30px;
     border-radius: 5px;
     background-color: #d8d8d8;
 }
-
-.product-text {
+.product-intro {
     font-size: 30px;
     letter-spacing: 3px;
     text-align: center;
 }
-.platinum{
-    margin-top: 30px;
+.unit-section{
+    display:flex;
+    align-items: center;
 }
-.unit-image{
-    max-width: 50px;
+.platinum{
+    max-width: 60px;
+    padding:5px;
+}
+.silver{
+    max-width: 60px;
+    padding:5px;
+}
+.clairify-1{
+    max-width: 60px;
+    padding:5px;
+}
+.clairify-ro{
+    max-width: 55px;
+    padding:5px;
+}
+.product-text{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:10px;
 }

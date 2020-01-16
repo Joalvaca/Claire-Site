@@ -1,13 +1,13 @@
-.Intro{
+.intro{
     display:flex;
     flex-direction: column;
     align-items: center;
-    height: 600px;
     font-size: 15px;
 }
 .media-image{
-   max-width:1000px;
-    border-radius: 10px;
+    width: 100%;
+    height:450px;
+    
 }
 .intro-text{
     font-size: 20px;

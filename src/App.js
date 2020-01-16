@@ -22,7 +22,6 @@ class App extends React.Component {
         <Intro/>
         <Products/>
         <Form/>
-        <Results/>
         <Footer/>
       </div>
     )

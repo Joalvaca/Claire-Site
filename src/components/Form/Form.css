@@ -1,7 +1,25 @@
-.Form{
+.form{
     color:black;
     text-align: center;
-    height: 200px;
+    height: 600px;
     border:1px solid black;
+}
+.form-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.user-form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border:1px solid black;
+    height:500px;
+    width:500px;
+}
+.user-result{
+    border:1px solid black;
+    height:500px;
+    width:500px;
 }
 

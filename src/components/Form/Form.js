@@ -9,23 +9,24 @@ class Form extends React.Component {
             preFilter:'yes',
             bacteria: 'yes',
             source: 'yes',
-            character:{}
+            allProducts:{}
         }
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }    
         componentDidMount() {
-            fetch("https://swapi.co/api/people/1")
+            fetch("https://localhost:8000/api/products")
                 .then(response => response.json())
-                .then(data => {
-                    this.setState({
-                        character:data
-                    })
+                .then(response => {
+                   const {products} = response.data
+                   console.log(products)
+                   this.setState({ allProducts: products})
+                    
                 })
         }
 
-      
+     
 
     handleSubmit(event) {
         alert('A name was submitted: ' + this.state.flow);
@@ -33,8 +34,9 @@ class Form extends React.Component {
     }
 
     handleChange(event) {
+        const { name,value} =event.target
         this.setState({
-            [event.target.name]:event.target.value
+            [name]:value
         });
     }
 
@@ -99,7 +101,17 @@ class Form extends React.Component {
                     <section className='user-result'>
                         <div>
                             <h1>Results</h1>
-                            <p>{this.state.character.name}</p>
+                            <p></p>
+                            <div className="unit">
+                                <div className='unit-section'>
+                                    <img className='silver'  alt='platinum'/>
+                                </div>
+                                <div className='product-text'>
+                                    <h1>Silver</h1>
+                                    <p>xxxxxxxxxxxx</p>
+                                    <p>Price</p>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>

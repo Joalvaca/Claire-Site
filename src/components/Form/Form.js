@@ -9,20 +9,18 @@ class Form extends React.Component {
             preFilter:'yes',
             bacteria: 'yes',
             source: 'yes',
-            allProducts:{}
+            allProducts:[]
         }
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }    
         componentDidMount() {
-            fetch("https://localhost:8000/api/products")
+            fetch("http://localhost:8000/api/products")
                 .then(response => response.json())
-                .then(response => {
-                   const {products} = response.data
-                   console.log(products)
-                   this.setState({ allProducts: products})
-                    
+                .then( products=> {
+                    console.log(products)
+                   this.setState({ allProducts: products})               
                 })
         }
 
@@ -108,7 +106,6 @@ class Form extends React.Component {
                                 </div>
                                 <div className='product-text'>
                                     <h1>Silver</h1>
-                                    <p>xxxxxxxxxxxx</p>
                                     <p>Price</p>
                                 </div>
                             </div>

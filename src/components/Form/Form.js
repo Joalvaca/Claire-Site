@@ -1,5 +1,6 @@
 import React from "react";
 import './Form.css';
+import Products from "../Products/Products";
 
 class Form extends React.Component {
     constructor() {
@@ -27,12 +28,12 @@ class Form extends React.Component {
      
 
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.flow);
+        alert('Your product is  ' + this.state.flow);
         event.preventDefault();
     }
 
     handleChange(event) {
-        const { name,value} =event.target
+        const { name,value} = event.target
         this.setState({
             [name]:value
         });
@@ -42,6 +43,8 @@ class Form extends React.Component {
         return (
             <div className='form'>
                 <h1>Form</h1>
+                <div>
+                </div>
                 <div className='form-section'>
                     <section className='user-form'>
                         <form className='user-form' onSubmit={this.handleSubmit}>
@@ -102,12 +105,17 @@ class Form extends React.Component {
                             <p></p>
                             <div className="unit">
                                 <div className='unit-section'>
-                                    <img className='silver'  alt='platinum'/>
-                                </div>
-                                <div className='product-text'>
-                                    <h1>Silver</h1>
-                                    <p>Price</p>
-                                </div>
+                                    </div>
+                                        {this.state.allProducts.map((item) =>{
+                                             return (   
+                                                <div className='product-text'>
+                                                     <h1>{item.product_name}</h1>
+                                                        <p>{item.image}</p>
+                                                         <p>{item.product_description}</p>
+                                                         <p>{item.price}</p>
+                                                </div>
+                                                          )
+                                                    })}
                             </div>
                         </div>
                     </section>

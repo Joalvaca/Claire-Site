@@ -6,24 +6,32 @@ class Form extends React.Component {
     constructor() {
         super()
         this.state = {
+            filterResult:[],
             flow: '0-1',
             preFilter:'yes',
             bacteria: 'yes',
             source: 'yes',
-            allProducts:[]
+            allProducts:[{product_id:1,product_gpm:"9-16",product_filter:true,product_source:"well",product_test:true,product_name:"Platinum",product_description:"12gpm",price:"400"},
+            {product_id:2,product_gpm:"5-8",product_filter:true,product_source:"well",product_test:true,product_name:"Silver",product_description:"12gpm",price:"300"},
+            ,{product_id:3,product_gpm:"2-4",product_filter:true,product_source:"well",product_test:true,product_name:"Clairify RO",product_description:"12gpm",price:"400"},
+            {product_id:4,product_gpm:"0-1",product_filter:true,product_source:"well",product_test:true,product_name:"Clairify 1",product_description:"12gpm",price:"400"}]
         }
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.filterByGpm = this.filterByGpm.bind(this);
+        this.filterByFilter = this.filterByFilter.bind(this);
+        this.filterBySource = this.filterBySource.bind(this);
+        this.filterByBacteria = this.filterByBacteria.bind(this)
     }    
-        componentDidMount() {
-            fetch("http://localhost:8000/api/products")
-                .then(response => response.json())
-                .then( products=> {
-                    console.log(products)
-                   this.setState({ allProducts: products})               
-                })
-        }
+        // componentDidMount() {
+        //     fetch("http://localhost:8000/api/products")
+        //         .then(response => response.json())
+        //         .then( products=> {
+        //             console.log(products)
+        //            this.setState({ allProducts: products})               
+        //         })
+        // }
 
      
 
@@ -37,6 +45,55 @@ class Form extends React.Component {
         this.setState({
             [name]:value
         });
+        if (name == "flow"){
+            this.filterByGpm(value)
+        }
+        if (name == "preFilter"){
+           this.filterByFilter(value)
+        } 
+
+        if (name == "source"){
+            this.filterBySource(value)
+         } 
+         if (name == "bacteria"){
+            this.filterByBacteria(value)
+         } 
+    }
+
+    filterByGpm (gpm) {
+        this.setState((state) =>{
+            return {...state,filterResult:state.allProducts.filter((product) => {
+                return product.product_gpm == gpm
+            } )}
+        }    
+        )
+    }
+
+    filterByFilter(filter){
+        this.setState((state) =>{
+            return {...state,filterResult:state.allProducts.filter((product) => {
+                return product.product_filter == true
+            })}
+        }
+        ) 
+    }
+
+    filterBySource(source){
+        this.setState((state) =>{
+            return {...state,filterResult:state.allProducts.filter((product) => {
+                return product.product_filter == source
+            })}
+        }
+        ) 
+    }
+
+    filterByBacteria(bacteria){
+        this.setState((state) =>{
+            return {...state,filterResult:state.allProducts.filter((product) => {
+                return product.product_filter == true
+            })}
+        }
+        ) 
     }
 
     render() {
@@ -56,7 +113,7 @@ class Form extends React.Component {
                                     value={this.state.flow}
                                     name="flow"
                                     >
-                                        <option value='City'>0-1</option>
+                                        <option value='0-1'>0-1</option>
                                         <option value='2-4'>2-4</option>
                                         <option value='5-8'>5-8</option>
                                         <option value='9-16'>9-16</option>
@@ -77,8 +134,8 @@ class Form extends React.Component {
                             <label>
                                 <select 
                                     onChange={this.handleChange} 
-                                    value={this.state.bacteria}
-                                    name="bacteria"
+                                    value={this.state.source}
+                                    name="source"
                                     >
                                         <option value='City'>City</option>
                                         <option value='Well'>Well</option>
@@ -88,8 +145,8 @@ class Form extends React.Component {
                             <label>
                                 <select 
                                     onChange={this.handleChange} 
-                                    value={this.state.source}
-                                    name="source"
+                                    value={this.state.bacteria}
+                                    name="bacteria"
                                     >
                                         <option value='yes'>Yes</option>
                                         <option value='no'>No</option>
@@ -106,13 +163,14 @@ class Form extends React.Component {
                             <div className="unit">
                                 <div className='unit-section'>
                                     </div>
-                                        {this.state.allProducts.map((item) =>{
+                                        {this.state.filterResult.map((item) =>{
                                              return (   
                                                 <div className='product-text'>
                                                      <h1>{item.product_name}</h1>
                                                         <p>{item.image}</p>
                                                          <p>{item.product_description}</p>
                                                          <p>{item.price}</p>
+                                                         <p>{item.product_filter}</p>
                                                 </div>
                                                           )
                                                     })}

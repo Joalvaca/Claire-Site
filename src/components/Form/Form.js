@@ -7,14 +7,14 @@ class Form extends React.Component {
         super()
         this.state = {
             filterResult:[],
-            flow: '0-1',
+            flow: '0',
             preFilter:'yes',
             bacteria: 'yes',
             source: 'yes',
-            allProducts:[{product_id:1,product_gpm:"9-16",product_filter:true,product_source:"well",product_test:true,product_name:"Platinum",product_description:"12gpm",price:"400"},
-            {product_id:2,product_gpm:"5-8",product_filter:true,product_source:"well",product_test:true,product_name:"Silver",product_description:"12gpm",price:"300"},
-            ,{product_id:3,product_gpm:"2-4",product_filter:true,product_source:"well",product_test:true,product_name:"Clairify RO",product_description:"12gpm",price:"400"},
-            {product_id:4,product_gpm:"0-1",product_filter:true,product_source:"well",product_test:true,product_name:"Clairify 1",product_description:"12gpm",price:"400"}]
+            allProducts:[{product_id:1,product_gpm:"9-16",product_filter:"Yes",product_source:"well",product_test:true,product_name:"Platinum",product_description:"12gpm",price:"400"},
+            {product_id:2,product_gpm:"5-8",product_filter:"Yes",product_source:"well",product_test:true,product_name:"Silver",product_description:"12gpm",price:"300"}
+            ,{product_id:3,product_gpm:"2-4",product_filter:"Yes",product_source:"well",product_test:true,product_name:"Clairify RO",product_description:"12gpm",price:"400"},
+            {product_id:4,product_gpm:".1-1",product_filter:"Yes",product_source:"well",product_test:true,product_name:"Clairify 1",product_description:"12gpm",price:"400"}]
         }
     
         this.handleChange = this.handleChange.bind(this);
@@ -22,7 +22,6 @@ class Form extends React.Component {
         this.filterByGpm = this.filterByGpm.bind(this);
         this.filterByFilter = this.filterByFilter.bind(this);
         this.filterBySource = this.filterBySource.bind(this);
-        this.filterByBacteria = this.filterByBacteria.bind(this)
     }    
         // componentDidMount() {
         //     fetch("http://localhost:8000/api/products")
@@ -55,9 +54,6 @@ class Form extends React.Component {
         if (name == "source"){
             this.filterBySource(value)
          } 
-         if (name == "bacteria"){
-            this.filterByBacteria(value)
-         } 
     }
 
     filterByGpm (gpm) {
@@ -69,31 +65,33 @@ class Form extends React.Component {
         )
     }
 
-    filterByFilter(filter){
-        this.setState((state) =>{
-            return {...state,filterResult:state.allProducts.filter((product) => {
-                return product.product_filter == true
-            })}
+    filterByFilter(value) {
+        if (value =='No'){
+            alert('you need pre filter')
         }
-        ) 
+        else {
+            this.setState((state) => { 
+                return {...state,filterResult:state.filterResult.filter((product) => {
+                    return product.product_filter == value 
+                })}
+            }
+            ) 
+        }
     }
 
-    filterBySource(source){
-        this.setState((state) =>{
-            return {...state,filterResult:state.allProducts.filter((product) => {
-                return product.product_filter == source
-            })}
+    filterBySource(value){
+        if (value =='No'){
+            alert ('you need to be on well water')
         }
-        ) 
-    }
 
-    filterByBacteria(bacteria){
-        this.setState((state) =>{
-            return {...state,filterResult:state.allProducts.filter((product) => {
-                return product.product_filter == true
-            })}
+        else {
+            this.setState((state) =>{
+                return {...state,filterResult:state.filterResult.filter((product) => {
+                    return product.product_filter == value
+                })}
+            }
+            ) 
         }
-        ) 
     }
 
     render() {
@@ -113,7 +111,8 @@ class Form extends React.Component {
                                     value={this.state.flow}
                                     name="flow"
                                     >
-                                        <option value='0-1'>0-1</option>
+                                        <option value='0'>0</option>
+                                        <option value='.1-1'>.1-1</option>
                                         <option value='2-4'>2-4</option>
                                         <option value='5-8'>5-8</option>
                                         <option value='9-16'>9-16</option>
@@ -130,15 +129,15 @@ class Form extends React.Component {
                                     >
                                 </select>
                             </label>
-                            <p>Is your Source of water city or well?</p>
+                            <p>Is your Source of water from a well</p>
                             <label>
                                 <select 
                                     onChange={this.handleChange} 
                                     value={this.state.source}
                                     name="source"
                                     >
-                                        <option value='City'>City</option>
-                                        <option value='Well'>Well</option>
+                                        <option value='Yes'>Yes</option>
+                                        <option value='No'>No</option>
                                 </select>
                             </label>
                             <p>Have you had your water tested for bacteria</p>

@@ -21,7 +21,6 @@ function Products() {
                         <p>Price</p>
                     </div>
                 </div>
-                });
                 <div className="unit">
                     <div className='unit-section'>
                         <img className='silver' src={Silver} alt='platinum'/>

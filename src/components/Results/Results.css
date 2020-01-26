@@ -1,15 +1,23 @@
-.results{
-    color:black;
-    text-align: center;
-    height: 350px;
-    border:1px solid black;
+.results {
+  color: black;
+  text-align: center;
+  height: 350px;
+  border: 1px solid black;
 }
-.product-result{
-        border: 1px solid black;
-        width:200px; 
-        height:200px;
+.product-result {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
 }
-.result-section{
-    display: flex;
-    justify-content: center;
+.result-section {
+  display: flex;
+  justify-content: center;
+}
+.drop-down {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }

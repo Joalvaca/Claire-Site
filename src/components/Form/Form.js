@@ -160,6 +160,7 @@ class Form extends React.Component {
               <p>Do you have a Pre-filter</p>
               <label>
                 <select
+                  className="drop-down"
                   onChange={this.handleChange}
                   value={this.state.preFilter}
                   name="preFilter"
@@ -171,6 +172,7 @@ class Form extends React.Component {
               <p>Is your Source of water from a well</p>
               <label>
                 <select
+                  className="drop-down"
                   onChange={this.handleChange}
                   value={this.state.source}
                   name="source"
@@ -179,19 +181,6 @@ class Form extends React.Component {
                   <option value="No">No</option>
                 </select>
               </label>
-              <p>Have you had your water tested for bacteria</p>
-              <label>
-                <select
-                  onChange={this.handleChange}
-                  value={this.state.bacteria}
-                  name="bacteria"
-                >
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-              </label>
-              <p>Statement</p>
-              <input type="submit" value="Submit" />
             </form>
           </section>
           <section className="user-result">

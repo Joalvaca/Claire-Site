@@ -140,7 +140,7 @@ class Form extends React.Component {
         <div></div>
         <div className="form-section">
           <section className="user-form">
-            <form className="user-form" onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
               <h1>Hello</h1>
               <p>What is your household flow in gpms (gallons per minute)</p>
               <label>
@@ -183,7 +183,7 @@ class Form extends React.Component {
               </label>
             </form>
           </section>
-          <section className="user-result">
+          <section className="user-form">
             <div>
               <h1>Results</h1>
               <p></p>

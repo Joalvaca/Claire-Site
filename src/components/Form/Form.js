@@ -98,6 +98,7 @@ class Form extends React.Component {
         return (
             <div className='form'>
                 <h1>Form</h1>
+                <p>Please answer the following question, so that we may find a unit thats perfect for you.</p>
                 <div>
                 </div>
                 <div className='form-section'>
@@ -159,7 +160,7 @@ class Form extends React.Component {
                         <div>
                             <h1>Results</h1>
                             <p></p>
-                            <div className="unit">
+                            <div className="unit-result">
                                 <div className='unit-section'>
                                     </div>
                                         {this.state.filterResult.map((item) =>{
@@ -169,7 +170,7 @@ class Form extends React.Component {
                                                         <p>{item.image}</p>
                                                          <p>{item.product_description}</p>
                                                          <p>{item.price}</p>
-                                                         <p>{item.product_filter}</p>
+                                                         
                                                 </div>
                                                           )
                                                     })}

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Form.css";
 import Products from "../Products/Products";
+import Claire from "../../images/Claire-logo.png";
 
 class Form extends React.Component {
   constructor() {
@@ -132,17 +133,21 @@ class Form extends React.Component {
   render() {
     return (
       <div className="form">
-        <h1>Form</h1>
-        <p>
-          Please answer the following question, so that we may find a unit thats
-          perfect for you.
-        </p>
+        <div className="form-intro">
+          <img className="form-logo" src={Claire} alt="platinum" />
+          <p className="form-text">
+            Please choose the specfic product so that we may give you further
+            information, so see which product suites your needs best
+          </p>
+        </div>
         <div></div>
         <div className="form-section">
           <section className="user-form">
             <form onSubmit={this.handleSubmit}>
-              <h1>Hello</h1>
-              <p>What is your household flow in gpms (gallons per minute)</p>
+              <h1 className="form-header">Hello</h1>
+              <p className="user-text">
+                What is your household flow in gpms (gallons per minute)
+              </p>
               <label>
                 <select
                   className="drop-down"

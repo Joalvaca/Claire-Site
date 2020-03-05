@@ -7,7 +7,7 @@ function Footer() {
     <div className="footer">
       <div className="footer-section">
         <div className="footer-icons">(984)-242-0855</div>
-        <div className="footer-icons">info@Claire-technologies.com</div>
+        <div className="footer-icons">Info@Claire-technologies.com</div>
         <div className="footer-icons">
           <FontAwesomeIcon icon={["fab", "linkedin"]} size="3x" />
         </div>

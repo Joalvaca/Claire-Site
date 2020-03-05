@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.css";
-import Claire from "./images/Claire-logo.png";
+import Claire from "../../images/Claire-logo.png";
 
 function Header() {
   return (

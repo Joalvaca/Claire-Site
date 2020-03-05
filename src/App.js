@@ -10,18 +10,16 @@ import {} from "@fortawesome/free-solid-svg-icons";
 
 library.add(fab);
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <Intro />
-        <Products />
-        <Form />
-        <Footer />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div>
+      <Header />
+      <Intro />
+      <Products />
+      <Form />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

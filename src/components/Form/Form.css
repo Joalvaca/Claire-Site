@@ -2,12 +2,33 @@
   color: black;
   text-align: center;
   height: 600px;
-  border: 1px solid black;
 }
 .form-section {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+.form-header {
+  color: white;
+}
+.form-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-logo {
+  max-width: 100px;
+}
+.form-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 950px;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.user-text {
+  color: white;
 }
 .user-form {
   display: flex;
@@ -18,13 +39,14 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 30px;
   border-radius: 5px;
-  background-color: #d8d8d8;
+  background-color: black;
   margin: 30px;
 }
+
 .user-result {
   height: 300px;
   width: 500px;
-  background-color: #d8d8d8;
+  background-color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .drop-down {
@@ -32,7 +54,7 @@
   border: 2px solid black;
   border-radius: 5px;
   font-size: 20px;
-  background-color: black;
+  background-color: #245ca6;
   color: white;
   text-align: center;
 }

@@ -8,67 +8,28 @@ class Form extends React.Component {
     super();
     this.state = {
       filterResult: [],
-      flow: "0",
-      preFilter: "yes",
-      bacteria: "yes",
-      source: "yes",
-      allProducts: [
-        {
-          product_id: 1,
-          product_gpm: "9-16",
-          product_filter: "Yes",
-          product_source: "well",
-          product_name: "Platinum",
-          product_description: "12gpm",
-          price: "400"
-        },
-        {
-          product_id: 2,
-          product_gpm: "5-8",
-          product_filter: "Yes",
-          product_source: "well",
-          product_name: "Silver",
-          product_description: "12gpm",
-          price: "300"
-        },
-        {
-          product_id: 3,
-          product_gpm: "2-4",
-          product_filter: "Yes",
-          product_source: "well",
-          product_name: "Clairify RO",
-          product_description: "12gpm",
-          price: "400"
-        },
-        {
-          product_id: 4,
-          product_gpm: ".1-1",
-          product_filter: "Yes",
-          product_source: "well",
-          product_name: "Clairify 1",
-          product_description: "12gpm",
-          price: "400"
-        }
-      ]
+      name: "Platinum",
+      allProducts: []
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.filterByGpm = this.filterByGpm.bind(this);
-    this.filterByFilter = this.filterByFilter.bind(this);
-    this.filterBySource = this.filterBySource.bind(this);
+    // this.filterByGpm = this.filterByGpm.bind(this);
+    this.filterByName = this.filterByName.bind(this);
+    // this.filterByFilter = this.filterByFilter.bind(this);
+    // this.filterBySource = this.filterBySource.bind(this);
   }
-  // componentDidMount() {
-  //     fetch("http://localhost:8000/api/products")
-  //         .then(response => response.json())
-  //         .then( products=> {
-  //             console.log(products)
-  //            this.setState({ allProducts: products})
-  //         })
-  // }
+  componentDidMount() {
+    fetch("http://localhost:8000/api/products")
+      .then(response => response.json())
+      .then(products => {
+        console.log(products);
+        this.setState({ allProducts: products });
+      });
+  }
 
   handleSubmit(event) {
-    alert("Your product is  " + this.state.flow);
+    alert("Your product is  " + this.state.name);
     event.preventDefault();
   }
 
@@ -77,58 +38,58 @@ class Form extends React.Component {
     this.setState({
       [name]: value
     });
-    if (name == "flow") {
-      this.filterByGpm(value);
-    }
-    if (name == "preFilter") {
-      this.filterByFilter(value);
-    }
 
-    if (name == "source") {
-      this.filterBySource(value);
+    if (name == "name") {
+      this.filterByName(value);
     }
+    //   if (name == "preFilter") {
+    //     this.filterByFilter(value);
+    //   }
+
+    //   if (name == "source") {
+    //     this.filterBySource(value);
+    //   }
+    // }
   }
-
-  filterByGpm(gpm) {
+  filterByName(name) {
     this.setState(state => {
       return {
         ...state,
         filterResult: state.allProducts.filter(product => {
-          return product.product_gpm == gpm;
+          return product.product_name === name;
         })
       };
     });
   }
+  // filterByFilter(value) {
+  //   if (value == "No") {
+  //     alert("you need pre filter");
+  //   } else {
+  //     this.setState(state => {
+  //       return {
+  //         ...state,
+  //         filterResult: state.filterResult.filter(product => {
+  //           return product.product_filter == value;
+  //         })
+  //       };
+  //     });
+  //   }
+  // }
 
-  filterByFilter(value) {
-    if (value == "No") {
-      alert("you need pre filter");
-    } else {
-      this.setState(state => {
-        return {
-          ...state,
-          filterResult: state.filterResult.filter(product => {
-            return product.product_filter == value;
-          })
-        };
-      });
-    }
-  }
-
-  filterBySource(value) {
-    if (value == "No") {
-      alert("you need to be on well water");
-    } else {
-      this.setState(state => {
-        return {
-          ...state,
-          filterResult: state.filterResult.filter(product => {
-            return product.product_filter == value;
-          })
-        };
-      });
-    }
-  }
+  // filterBySource(value) {
+  //   if (value == "No") {
+  //     alert("you need to be on well water");
+  //   } else {
+  //     this.setState(state => {
+  //       return {
+  //         ...state,
+  //         filterResult: state.filterResult.filter(product => {
+  //           return product.product_filter == value;
+  //         })
+  //       };
+  //     });
+  //   }
+  // }
 
   render() {
     return (
@@ -137,7 +98,7 @@ class Form extends React.Component {
           <img className="form-logo" src={Claire} alt="platinum" />
           <p className="form-text">
             Please choose the specfic product so that we may give you further
-            information, so see which product suites your needs best
+            information, so see which product suites your best needs
           </p>
         </div>
         <div></div>
@@ -152,38 +113,12 @@ class Form extends React.Component {
                 <select
                   className="drop-down"
                   onChange={this.handleChange}
-                  value={this.state.flow}
-                  name="flow"
+                  value={this.state.name}
+                  name="name"
                 >
-                  <option value="0">0</option>
-                  <option value=".1-1">.1-1</option>
-                  <option value="2-4">2-4</option>
-                  <option value="5-8">5-8</option>
-                  <option value="9-16">9-16</option>
-                </select>
-              </label>
-              <p>Do you have a Pre-filter</p>
-              <label>
-                <select
-                  className="drop-down"
-                  onChange={this.handleChange}
-                  value={this.state.preFilter}
-                  name="preFilter"
-                >
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
-                </select>
-              </label>
-              <p>Is your Source of water from a well</p>
-              <label>
-                <select
-                  className="drop-down"
-                  onChange={this.handleChange}
-                  value={this.state.source}
-                  name="source"
-                >
-                  <option value="Yes">Yes</option>
-                  <option value="No">No</option>
+                  <option value="Platinum">Platinum</option>
+                  <option value="Silver">Silver</option>
+                  <option value="Clairify 1">Clairify 1</option>
                 </select>
               </label>
             </form>
@@ -191,7 +126,7 @@ class Form extends React.Component {
           <section className="user-form">
             <div>
               <h1>Results</h1>
-              <p></p>
+              <p>{this.state.filterResult.length}</p>
               <div className="unit-result">
                 <div className="unit-section"></div>
                 {this.state.filterResult.map(item => {

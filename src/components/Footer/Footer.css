@@ -1,20 +1,38 @@
 .footer {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   background-color: black;
   height: 100px;
 }
 .footer-section {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  margin: 30px 15px;
 }
 .footer-icons {
-  font-size: 18px;
+  font-size: 15px;
   letter-spacing: 2px;
   color: white;
-  margin-left: 100px;
+  text-align: center;
 }
 .icon {
   font-size: 40px;
+}
+
+@media (max-width: 780px) {
+  .footer-icons {
+    font-size: 12px;
+    text-align: center;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-icons {
+    font-size: 10px;
+    margin-left: 20px;
+    text-align: center;
+  }
 }

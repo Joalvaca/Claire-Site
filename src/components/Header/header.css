@@ -20,7 +20,24 @@ a {
   padding: 25px;
   letter-spacing: 3px;
 }
+.nav-links:hover {
+  cursor: pointer;
+  color: #245ca6;
+}
 .logo {
   max-width: 40px;
   margin-left: 30px;
+}
+@media (max-width: 780px) {
+  .nav-links {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    font-size: 10px;
+    padding: 0px;
+    margin-right: 32px;
+  }
 }

@@ -7,7 +7,7 @@ function Intro() {
   return (
     <div className="intro">
       <img className="media-title" src={QD} alt="platinum" />
-      <p className="intro-text">
+      <p className="intro-text" id="intro">
         Quantum Disinfection™ is a revolutionary technology that uses quantum
         mechanic principles of electron movement to create catalytic active
         surfaces. This is the first time such a technology has been used to

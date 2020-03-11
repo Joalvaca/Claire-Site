@@ -1,6 +1,5 @@
 import React from "react";
 import "./Form.css";
-import Products from "../Products/Products";
 import Claire from "../../images/Claire-logo.png";
 
 class Form extends React.Component {
@@ -8,17 +7,15 @@ class Form extends React.Component {
     super();
     this.state = {
       filterResult: [],
-      name: "Platinum",
+      name: "Select",
       allProducts: []
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.filterByGpm = this.filterByGpm.bind(this);
     this.filterByName = this.filterByName.bind(this);
-    // this.filterByFilter = this.filterByFilter.bind(this);
-    // this.filterBySource = this.filterBySource.bind(this);
   }
+
   componentDidMount() {
     fetch("http://localhost:8000/api/products")
       .then(response => response.json())
@@ -29,7 +26,6 @@ class Form extends React.Component {
   }
 
   handleSubmit(event) {
-    alert("Your product is  " + this.state.name);
     event.preventDefault();
   }
 
@@ -39,17 +35,9 @@ class Form extends React.Component {
       [name]: value
     });
 
-    if (name == "name") {
+    if (name === "name") {
       this.filterByName(value);
     }
-    //   if (name == "preFilter") {
-    //     this.filterByFilter(value);
-    //   }
-
-    //   if (name == "source") {
-    //     this.filterBySource(value);
-    //   }
-    // }
   }
   filterByName(name) {
     this.setState(state => {
@@ -61,53 +49,25 @@ class Form extends React.Component {
       };
     });
   }
-  // filterByFilter(value) {
-  //   if (value == "No") {
-  //     alert("you need pre filter");
-  //   } else {
-  //     this.setState(state => {
-  //       return {
-  //         ...state,
-  //         filterResult: state.filterResult.filter(product => {
-  //           return product.product_filter == value;
-  //         })
-  //       };
-  //     });
-  //   }
-  // }
-
-  // filterBySource(value) {
-  //   if (value == "No") {
-  //     alert("you need to be on well water");
-  //   } else {
-  //     this.setState(state => {
-  //       return {
-  //         ...state,
-  //         filterResult: state.filterResult.filter(product => {
-  //           return product.product_filter == value;
-  //         })
-  //       };
-  //     });
-  //   }
-  // }
 
   render() {
     return (
-      <div className="form">
+      <div className="form" id="specifications">
         <div className="form-intro">
           <img className="form-logo" src={Claire} alt="platinum" />
           <p className="form-text">
             Please choose the specfic product so that we may give you further
-            information, so see which product suites your best needs
+            information, to see which product suites your best needs
           </p>
         </div>
         <div></div>
         <div className="form-section">
           <section className="user-form">
             <form onSubmit={this.handleSubmit}>
-              <h1 className="form-header">Hello</h1>
+              <h1 className="form-header">Claire Technologies</h1>
               <p className="user-text">
-                What is your household flow in gpms (gallons per minute)
+                Select a unit from the drop down box to see unique
+                specifications for each unit
               </p>
               <label>
                 <select
@@ -116,26 +76,45 @@ class Form extends React.Component {
                   value={this.state.name}
                   name="name"
                 >
+                  <option value="Select">Select unit</option>
                   <option value="Platinum">Platinum</option>
                   <option value="Silver">Silver</option>
                   <option value="Clairify 1">Clairify 1</option>
                 </select>
               </label>
             </form>
+            <div className="user-bar"></div>
           </section>
           <section className="user-form">
             <div>
-              <h1>Results</h1>
-              <p>{this.state.filterResult.length}</p>
               <div className="unit-result">
-                <div className="unit-section"></div>
                 {this.state.filterResult.map(item => {
                   return (
-                    <div className="product-text">
-                      <h1>{item.product_name}</h1>
-                      <p>{item.image}</p>
-                      <p>{item.product_description}</p>
-                      <p>{item.price}</p>
+                    <div>
+                      <h1 className="product-name">{item.product_name}</h1>
+
+                      <p className="product-text">
+                        Water Flow: {item.max_water_flow}
+                      </p>
+                      <p className="product-text">
+                        QD Quantity: {item.quantity_of_qd}
+                      </p>
+                      <p className="product-text">
+                        Prefiltration: {item.prefiltration}
+                      </p>
+                      <p className="product-text">
+                        Unit Dimensions: {item.unit_dimensions}
+                      </p>
+                      <p className="product-text">
+                        Expected Life: {item.expected_life}
+                      </p>
+                      <p className="product-text">
+                        Operating Temperature: {item.operating_temperature} ℉
+                      </p>
+                      <p className="product-text">
+                        Inlet/Outlet: {item.inlet_outlet}
+                      </p>
+                      <div className="results-bar"></div>
                     </div>
                   );
                 })}

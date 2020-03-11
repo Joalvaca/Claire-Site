@@ -12,7 +12,7 @@ function Products() {
         <div className="product-header">
           <img className="product-logo" src={Claire} alt="platinum" />
         </div>
-        <p className="product-intro">
+        <p className="product-intro" id="products">
           All of our units come with the Claire guarantee, this guarantee states
           that each of our units uses no chemicals, no power and comes with a
           99.9% disinfection rate against E.coli.

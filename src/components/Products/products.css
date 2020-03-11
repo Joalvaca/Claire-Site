@@ -29,7 +29,7 @@
   font-size: 40px;
 }
 .product-intro {
-  width: 950px;
+  width: 800px;
 }
 .product-logo {
   max-width: 100px;
@@ -69,4 +69,24 @@
 .product-description {
   font-size: 20px;
   letter-spacing: 3px;
+}
+@media (max-width: 780px) {
+  .product-intro {
+    width: 550px;
+    font-size: 15px;
+  }
+  .water-units {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-intro {
+    width: 400px;
+    font-size: 13px;
+  }
+  .product-text {
+    font-size: 20px;
+  }
 }

@@ -7,12 +7,12 @@ import Claire from "../../images/Claire-logo.png";
 
 function Products() {
   return (
-    <div className="products">
+    <div className="products" id="products">
       <div className="product-section">
         <div className="product-header">
           <img className="product-logo" src={Claire} alt="platinum" />
         </div>
-        <p className="product-intro" id="products">
+        <p className="product-intro">
           All of our units come with the Claire guarantee, this guarantee states
           that each of our units uses no chemicals, no power and comes with a
           99.9% disinfection rate against E.coli.

@@ -15,6 +15,7 @@
   background-color: black;
   color: white;
   margin: 30px;
+  border-radius: 5px;
 }
 .product-section {
   display: flex;

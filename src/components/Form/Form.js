@@ -90,32 +90,34 @@ class Form extends React.Component {
               <div className="unit-result">
                 {this.state.filterResult.map(item => {
                   return (
-                    <div>
-                      <h1 className="product-name">{item.product_name}</h1>
+                    <li key={item.id}>
+                      <div>
+                        <h1 className="product-name">{item.product_name}</h1>
 
-                      <p className="product-text">
-                        Water Flow: {item.max_water_flow}
-                      </p>
-                      <p className="product-text">
-                        QD Quantity: {item.quantity_of_qd}
-                      </p>
-                      <p className="product-text">
-                        Prefiltration: {item.prefiltration}
-                      </p>
-                      <p className="product-text">
-                        Unit Dimensions: {item.unit_dimensions}
-                      </p>
-                      <p className="product-text">
-                        Expected Life: {item.expected_life}
-                      </p>
-                      <p className="product-text">
-                        Operating Temperature: {item.operating_temperature} ℉
-                      </p>
-                      <p className="product-text">
-                        Inlet/Outlet: {item.inlet_outlet}
-                      </p>
-                      <div className="results-bar"></div>
-                    </div>
+                        <p className="product-text">
+                          Water Flow: {item.max_water_flow}
+                        </p>
+                        <p className="product-text">
+                          QD Quantity: {item.quantity_of_qd}
+                        </p>
+                        <p className="product-text">
+                          Prefiltration: {item.prefiltration}
+                        </p>
+                        <p className="product-text">
+                          Unit Dimensions: {item.unit_dimensions}
+                        </p>
+                        <p className="product-text">
+                          Expected Life: {item.expected_life}
+                        </p>
+                        <p className="product-text">
+                          Operating Temperature: {item.operating_temperature} ℉
+                        </p>
+                        <p className="product-text">
+                          Inlet/Outlet: {item.inlet_outlet}
+                        </p>
+                        <div className="results-bar"></div>
+                      </div>
+                    </li>
                   );
                 })}
               </div>

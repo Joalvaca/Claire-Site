@@ -14,7 +14,7 @@
   padding: 30px;
   background-color: black;
   color: white;
-  margin: 30px;
+  margin: 10px;
   border-radius: 5px;
 }
 .product-section {
@@ -89,5 +89,8 @@
   }
   .product-text {
     font-size: 20px;
+  }
+  .product-logo {
+    max-width: 75px;
   }
 }

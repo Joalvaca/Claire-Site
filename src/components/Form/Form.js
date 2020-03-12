@@ -20,7 +20,6 @@ class Form extends React.Component {
     fetch("http://localhost:8000/api/products")
       .then(response => response.json())
       .then(products => {
-        console.log(products);
         this.setState({ allProducts: products });
       });
   }

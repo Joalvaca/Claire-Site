@@ -90,6 +90,10 @@
   padding: 2px;
   width: 100%;
 }
+.form-results {
+  max-width: 150px;
+  margin-top: 75px;
+}
 @media (max-width: 780px) {
   .form-text {
     width: 600px;

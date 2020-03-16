@@ -2,7 +2,7 @@
 
 An application that showcases Claire technologies three main products and specifications.
 
-## Technology
+## Technologies
 
 Claire Technologies was built using React and CSS
 

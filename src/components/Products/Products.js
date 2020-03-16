@@ -1,8 +1,8 @@
 import React from "react";
 import "./products.css";
-import Platinum from "./images/plat.png";
-import C1 from "./images/c1.png";
-import Silver from "./images/silver.png";
+import Platinum from "../../images/plat.png";
+import C1 from "../../images/c1.png";
+import Silver from "../../images/silver.png";
 import Claire from "../../images/Claire-logo.png";
 
 function Products() {

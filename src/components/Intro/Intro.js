@@ -1,7 +1,7 @@
 import React from "react";
 import "./Intro.css";
-import Banner from "./images/banner.png";
-import QD from "./images/quantum-disinfection.png";
+import Banner from "../../images/banner.png";
+import QD from "../../images/quantum-disinfection.png";
 
 function Intro() {
   return (

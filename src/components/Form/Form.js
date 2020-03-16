@@ -112,8 +112,7 @@ class Form extends React.Component {
                             Expected Life: {item.expected_life}
                           </p>
                           <p className="product-text">
-                            Operating Temperature: {item.operating_temperature}{" "}
-                            ℉
+                            Operating Temperature: {item.operating_temperature}℉
                           </p>
                           <p className="product-text">
                             Inlet/Outlet: {item.inlet_outlet}

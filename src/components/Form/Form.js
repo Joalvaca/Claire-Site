@@ -74,6 +74,7 @@ class Form extends React.Component {
                   onChange={this.handleChange}
                   value={this.state.name}
                   name="name"
+                  aria-label="select unit"
                 >
                   <option value="Select">Select unit</option>
                   <option value="Platinum">Platinum</option>

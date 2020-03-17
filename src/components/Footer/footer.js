@@ -17,6 +17,7 @@ function Footer() {
             href="https://www.linkedin.com/company/claire-technologies"
             target="_blank"
             rel="noopener noreferrer"
+            title="Linkedin"
           >
             <FontAwesomeIcon icon={["fab", "linkedin"]} size="3x" />
           </a>

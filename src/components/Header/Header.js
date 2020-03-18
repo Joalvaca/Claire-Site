@@ -21,7 +21,7 @@ class Header extends React.Component {
               offset={-70}
               duration={500}
             >
-              Intro
+              Intros
             </Link>
             <Link
               className="nav-links"

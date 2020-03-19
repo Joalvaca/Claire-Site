@@ -3,7 +3,7 @@
   "alias": "joels-claire-app",
   "name": "claire-app",
   "routes": [
-    { "handle": "filesystem" },
+    { "src": "^/static/(.*)", "dest": "/static/$1" },
     { "src": "/.*", "dest": "/index.html" }
   ]
 }

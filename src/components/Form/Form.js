@@ -1,6 +1,8 @@
 import React from "react";
 import "./Form.css";
 import Claire from "../../images/Claire-logo.png";
+import config from "../../config";
+console.log(config);
 
 class Form extends React.Component {
   constructor() {
@@ -17,7 +19,7 @@ class Form extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8000/api/products")
+    fetch(`${config.API_ENDPOINT}api/products`)
       .then(response => response.json())
       .then(products => {
         this.setState({ allProducts: products });

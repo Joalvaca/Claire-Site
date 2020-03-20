@@ -12,5 +12,9 @@ Claire Technologies was built using React and CSS
 
 ## Live Site
 
+<div>https://claire-app.joalvaca.now.sh/</div>
+
+## Claire App
+
 <div><img src="src/images/ClaireIntro.jpg" alt="Intro"><div>
 <div><img src="src/images/ClaireProducts.jpg" alt="Intro"><div>

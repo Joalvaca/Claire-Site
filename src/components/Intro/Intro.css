@@ -11,29 +11,29 @@
 .intro-text {
   font-size: 20px;
   letter-spacing: 3px;
-  width: 800px;
+  width: 75%;
   text-align: center;
 }
 .media-title {
-  width: 500px;
+  width: 40%;
   margin-top: 50px;
 }
 @media (max-width: 780px) {
   .media-title {
-    width: 450px;
+    width: 50%;
   }
   .intro-text {
     font-size: 15px;
-    width: 600px;
+    width: 80%;
   }
 }
 
 @media (max-width: 600px) {
   .media-title {
-    width: 400px;
+    width: 50%;
   }
   .intro-text {
     font-size: 13px;
-    width: 400px;
+    width: 75%;
   }
 }

@@ -30,16 +30,15 @@
   font-size: 40px;
 }
 .product-intro {
-  width: 800px;
+  width: 60%;
 }
 .product-logo {
   max-width: 100px;
 }
 .bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  position: relative;
   background-color: #245ca6;
+  margin-top: 50px;
   padding: 2px;
   width: 100%;
 }
@@ -49,23 +48,23 @@
   justify-content: center;
 }
 .platinum {
-  max-width: 75px;
+  max-width: 23%;
   padding: 5px;
 }
 .silver {
   margin-top: 15px;
-  max-width: 75px;
+  max-width: 22%;
   padding: 12px;
 }
 .clairify-1 {
-  max-width: 75px;
+  max-width: 20%;
   padding: 5px;
 }
 .product-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
+  padding: 7px;
 }
 .product-description {
   font-size: 20px;
@@ -73,7 +72,7 @@
 }
 @media (max-width: 780px) {
   .product-intro {
-    width: 550px;
+    width: 80%;
     font-size: 15px;
   }
   .water-units {
@@ -84,7 +83,7 @@
 
 @media (max-width: 600px) {
   .product-intro {
-    width: 400px;
+    width: 75%;
     font-size: 13px;
   }
   .product-text {

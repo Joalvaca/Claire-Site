@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 700px;
+  width: 80%;
   font-size: 20px;
   letter-spacing: 3px;
 }
@@ -37,7 +37,7 @@
   flex-direction: column;
   align-items: center;
   height: 350px;
-  width: 500px;
+  width: 60%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 30px;
   border-radius: 5px;
@@ -47,7 +47,7 @@
 
 .user-result {
   height: 300px;
-  width: 500px;
+  width: 60%;
   background-color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -73,11 +73,8 @@
   letter-spacing: 3px;
 }
 .user-bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
   background-color: #245ca6;
-  margin-top: 100px;
+  margin-top: 85px;
   padding: 2px;
   width: 100%;
 }
@@ -96,7 +93,7 @@
 }
 @media (max-width: 780px) {
   .form-text {
-    width: 600px;
+    width: 75%;
     font-size: 15px;
   }
   .user-text {
@@ -117,7 +114,7 @@
 
 @media (max-width: 600px) {
   .form-text {
-    width: 450px;
+    width: 75%;
     font-size: 13px;
   }
   .user-text {
@@ -125,14 +122,21 @@
   }
   .product-text {
     font-size: 13px;
+    padding: 12px;
   }
   .user-form {
-    width: 350px;
+    width: 75%;
   }
   .product-name {
     font-size: 20px;
   }
   .form-logo {
     max-width: 75px;
+  }
+  .user-bar {
+    margin-top: 90px;
+  }
+  .results-bar {
+    margin-top: 1px;
   }
 }

@@ -13,9 +13,10 @@ function Products() {
           <img className="product-logo" src={Claire} alt="platinum" />
         </div>
         <p className="product-intro">
-          All of our units come with the Claire guarantee, this guarantee states
-          that each of our units uses no chemicals, no power and comes with a
-          99.9% disinfection rate against E.coli.
+          All of our units come filled with Quantum Disinfection and with the
+          Claire guarantee. This guarantee states that each of our units uses no
+          chemicals, no power and comes with a 99.9% disinfection rate against
+          E.coli.
         </p>
       </div>
       <div className="water-units">
@@ -52,8 +53,8 @@ function Products() {
           <div className="product-text">
             <h1>Clairify 1</h1>
             <p className="product-description">
-              Introducing our Clairify 1 unit, is perfect for any home, boat and
-              recreational vehicle.
+              Introducing our Clairify 1 unit, it is perfect for any home, boat
+              and recreational vehicle.
             </p>
           </div>
           <div className="bar"></div>

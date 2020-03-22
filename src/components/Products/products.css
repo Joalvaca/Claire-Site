@@ -16,6 +16,7 @@
   color: white;
   margin: 10px;
   border-radius: 5px;
+  width: 100%;
 }
 .product-section {
   display: flex;
@@ -35,6 +36,10 @@
 .product-logo {
   max-width: 100px;
 }
+.product-name {
+  padding: 5px;
+  margin: auto;
+}
 .bar {
   position: relative;
   background-color: #245ca6;
@@ -53,11 +58,11 @@
 }
 .silver {
   margin-top: 15px;
-  max-width: 22%;
+  max-width: 24%;
   padding: 12px;
 }
 .clairify-1 {
-  max-width: 19%;
+  max-width: 22%;
   padding: 5px;
 }
 .product-text {
@@ -69,6 +74,7 @@
 .product-description {
   font-size: 20px;
   letter-spacing: 3px;
+  padding: 5px;
 }
 @media (max-width: 780px) {
   .product-intro {
@@ -78,6 +84,12 @@
   .water-units {
     display: flex;
     flex-direction: column;
+  }
+  .unit {
+    width: 88%;
+  }
+  .product-description {
+    font-size: 10px;
   }
 }
 
@@ -91,5 +103,8 @@
   }
   .product-logo {
     max-width: 75px;
+  }
+  .unit {
+    width: 85%;
   }
 }

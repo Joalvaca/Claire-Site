@@ -25,7 +25,7 @@ function Products() {
             <img className="platinum" src={Platinum} alt="platinum" />
           </div>
           <div className="product-text">
-            <h1>Platinum</h1>
+            <h1 className="product-name">Platinum</h1>
             <p className="product-description">
               Introducing our Platinum unit, perfect for homes that use well
               water.
@@ -38,7 +38,7 @@ function Products() {
             <img className="silver" src={Silver} alt="platinum" />
           </div>
           <div className="product-text">
-            <h1>Silver</h1>
+            <h1 className="product-name">Silver</h1>
             <p className="product-description">
               Introducing our Silver unit, a more compacted verison of our
               Platinum unit.
@@ -51,7 +51,7 @@ function Products() {
             <img className="clairify-1" src={C1} alt="platinum" />
           </div>
           <div className="product-text">
-            <h1>Clairify 1</h1>
+            <h1 className="product-name">Clairify 1</h1>
             <p className="product-description">
               Introducing our Clairify 1 unit, it is perfect for any home, boat
               and recreational vehicle.

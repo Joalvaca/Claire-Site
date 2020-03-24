@@ -1,0 +1,142 @@
+.form {
+  color: black;
+  text-align: center;
+}
+.form-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.form-header {
+  color: white;
+  letter-spacing: 3px;
+}
+.form-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-logo {
+  max-width: 100px;
+}
+.form-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.user-text {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 5px;
+  background-color: black;
+  margin: 30px;
+}
+
+.user-result {
+  height: 300px;
+  width: 60%;
+  background-color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.drop-down {
+  width: 170px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #245ca6;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  padding: 5px;
+}
+.product-text {
+  margin: 0;
+  color: white;
+  letter-spacing: 3px;
+}
+.product-name {
+  margin: 1px;
+  color: white;
+  letter-spacing: 3px;
+}
+.user-bar {
+  background-color: #245ca6;
+  margin-top: 85px;
+  padding: 2px;
+  width: 100%;
+}
+.results-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #245ca6;
+  margin-top: 1px;
+  padding: 2px;
+  width: 100%;
+}
+.form-results {
+  max-width: 150px;
+  margin-top: 75px;
+}
+@media (max-width: 780px) {
+  .form-text {
+    width: 75%;
+    font-size: 15px;
+  }
+  .user-text {
+    font-size: 15px;
+  }
+  .user-bar {
+    margin-top: 150px;
+  }
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .results-bar {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-text {
+    width: 75%;
+    font-size: 13px;
+  }
+  .user-text {
+    font-size: 15px;
+  }
+  .product-text {
+    font-size: 13px;
+    padding: 12px;
+  }
+  .user-form {
+    width: 75%;
+  }
+  .product-name {
+    font-size: 20px;
+  }
+  .form-logo {
+    max-width: 75px;
+  }
+  .user-bar {
+    margin-top: 90px;
+  }
+  .results-bar {
+    margin-top: 1px;
+  }
+}

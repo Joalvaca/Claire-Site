@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .nav {
   display: flex;
   justify-content: space-between;
@@ -7,7 +10,6 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 .nav-main {
-  display: flex;
   margin-left: 10px;
 }
 a {
@@ -16,7 +18,7 @@ a {
   color: white;
 }
 .nav-links {
-  font-size: 20px;
+  font-size: 13px;
   padding: 25px;
   letter-spacing: 3px;
 }
@@ -28,13 +30,18 @@ a {
   max-width: 40px;
   margin-left: 30px;
 }
-@media (max-width: 780px) {
+
+@media (min-width: 780px) {
   .nav-links {
-    font-size: 13px;
+    font-size: 20px;
+  }
+  .nav-main {
+    display: flex;
   }
 }
 
-@media (max-width: 600px) {
+/* at or above 600px */
+@media (min-width: 600px) {
   .nav-links {
     font-size: 15px;
     padding: 0px;
@@ -58,3 +65,4 @@ a {
     margin: 10px 0;
   }
 }
+/* 1rem = body { font-size: 16px; } */

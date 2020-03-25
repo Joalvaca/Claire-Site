@@ -8,7 +8,10 @@ function Footer() {
       <div className="footer-section">
         <div className="footer-icons">(984)-242-0855</div>
         <div className="footer-icons">
-          <a href="mailto:Info@Claire-technologies.com">
+          <a
+            className="claire-email"
+            href="mailto:Info@Claire-technologies.com"
+          >
             Info@Claire-technologies.com
           </a>
         </div>
@@ -18,6 +21,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             title="Linkedin"
+            className="linkedin"
           >
             <FontAwesomeIcon icon={["fab", "linkedin"]} size="3x" />
           </a>

@@ -31,7 +31,7 @@ function Products() {
               water.
             </p>
           </div>
-          <div className="bar"></div>
+          <div className="platinum-bar"></div>
         </div>
         <div className="unit">
           <div className="unit-section">
@@ -44,7 +44,7 @@ function Products() {
               Platinum unit.
             </p>
           </div>
-          <div className="bar"></div>
+          <div className="silver-bar"></div>
         </div>
         <div className="unit">
           <div className="unit-section">
@@ -57,7 +57,7 @@ function Products() {
               and recreational vehicle.
             </p>
           </div>
-          <div className="bar"></div>
+          <div className="clairify-bar"></div>
         </div>
       </div>
     </div>

@@ -99,25 +99,25 @@ class Form extends React.Component {
                         <div>
                           <h1 className="product-name">{item.product_name}</h1>
 
-                          <p className="product-text">
+                          <p className="product-specifications">
                             Water Flow: {item.max_water_flow}
                           </p>
-                          <p className="product-text">
+                          <p className="product-specifications">
                             QD Quantity: {item.quantity_of_qd}
                           </p>
-                          <p className="product-text">
+                          <p className="product-specifications">
                             Prefiltration: {item.prefiltration}
                           </p>
-                          <p className="product-text">
+                          <p className="product-specifications">
                             Unit Dimensions: {item.unit_dimensions}
                           </p>
-                          <p className="product-text">
+                          <p className="product-specifications">
                             Expected Life: {item.expected_life}
                           </p>
-                          <p className="product-text">
+                          <p className="product-specifications">
                             Operating Temperature: {item.operating_temperature}℉
                           </p>
-                          <p className="product-text">
+                          <p className="product-specifications">
                             Inlet/Outlet: {item.inlet_outlet}
                           </p>
                           <div className="results-bar"></div>

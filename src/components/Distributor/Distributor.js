@@ -53,27 +53,27 @@ class Distributor extends React.Component {
 
   render() {
     return (
-      <div className="form" id="specifications">
-        <div className="form-intro">
-          <img className="form-logo" src={Claire} alt="platinum" />
-          <p className="form-text">
+      <div className="distributor-form" id="distributors">
+        <div className="distributor-form-intro">
+          <img className="distributor-form-logo" src={Claire} alt="platinum" />
+          <p className="distributor-form-text">
             Once you have choosen a product that best fits your needs, please
             select the region you are nearest to, so that you may contact one of
             our distributors to purchase a product.
           </p>
         </div>
         <div></div>
-        <div className="form-section">
-          <section className="user-form">
+        <div className="distributor-form-section">
+          <section className="distributor-user-form">
             <form onSubmit={this.handleSubmit}>
-              <h1 className="form-header">Claire Technologies</h1>
-              <p className="user-text">
+              <h1 className="distributor-form-header">Claire Technologies</h1>
+              <p className="distributor-user-text">
                 Select a region from the drop down box to see our distributors
                 in the given region
               </p>
               <label>
                 <select
-                  className="drop-down"
+                  className="distributor-drop-down"
                   onChange={this.handleChange}
                   value={this.state.name}
                   name="name"
@@ -87,35 +87,39 @@ class Distributor extends React.Component {
                 </select>
               </label>
             </form>
-            <div className="user-bar"></div>
+            <div className="distributor-user-bar"></div>
           </section>
-          <section className="user-form">
+          <section className="distributor-user-form">
             <div>
-              <div className="unit-result">
+              <div className="distributor-unit-result">
                 {this.state.name === "Select" ? (
-                  <img className="form-results" src={Claire} alt="platinum" />
+                  <img
+                    className="distributor-form-results"
+                    src={Claire}
+                    alt="platinum"
+                  />
                 ) : (
                   this.state.distributorResult.map(distributor => {
                     return (
                       <li key={distributor.id}>
                         <div>
-                          <h1 className="product-name">
+                          <h1 className="distributor-name">
                             {distributor.region_name}
                           </h1>
 
-                          <p className="product-text">
+                          <p className="distributor-text">
                             company name: {distributor.company_name}
                           </p>
-                          <p className="product-text">
+                          <p className="distributor-text">
                             phone number: {distributor.phone_number}
                           </p>
-                          <p className="product-text">
+                          <p className="distributor-text">
                             email address: {distributor.email_address}
                           </p>
-                          <p className="product-text">
+                          <p className="distributor-text">
                             physical address: {distributor.physical_address}
                           </p>
-                          <div className="results-bar"></div>
+                          <div className="distributor-results-bar"></div>
                         </div>
                       </li>
                     );

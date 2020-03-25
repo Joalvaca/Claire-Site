@@ -8,7 +8,7 @@ class Header extends React.Component {
     return (
       <nav>
         <div className="nav">
-          <div>
+          <div className="nav-logo">
             <img className="logo" src={Claire} alt="platinum" />
           </div>
           <div className="nav-main">
@@ -44,6 +44,17 @@ class Header extends React.Component {
               duration={500}
             >
               Specifications
+            </Link>
+            <Link
+              className="nav-links"
+              activeClass="active"
+              to="distributors"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Distributors
             </Link>
             <Link
               className="nav-links"

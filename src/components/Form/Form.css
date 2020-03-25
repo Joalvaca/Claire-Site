@@ -69,12 +69,13 @@
   color: white;
   letter-spacing: 3px;
   padding: 10px;
+  font-size: 13px;
 }
 .product-name {
   margin: 1px;
   color: white;
   letter-spacing: 3px;
-  margin-top: 15px;
+  margin-top: 13px;
 }
 .user-bar {
   background-color: #245ca6;

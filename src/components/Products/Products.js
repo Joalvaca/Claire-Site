@@ -4,7 +4,7 @@ import Platinum from "../../images/plat.png";
 import C1 from "../../images/c1.png";
 import Silver from "../../images/silver.png";
 import Claire from "../../images/Claire-logo.png";
-
+import { Link } from "react-scroll";
 function Products() {
   return (
     <div className="products" id="products">
@@ -22,7 +22,16 @@ function Products() {
       <div className="water-units">
         <div className="unit">
           <div className="unit-section">
-            <img className="platinum" src={Platinum} alt="platinum" />
+            <Link
+              activeClass="active"
+              to="specifications"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <img className="platinum" src={Platinum} alt="platinum" />
+            </Link>
           </div>
           <div className="product-text">
             <h1 className="product-name">Platinum</h1>
@@ -35,7 +44,16 @@ function Products() {
         </div>
         <div className="unit">
           <div className="unit-section">
-            <img className="silver" src={Silver} alt="platinum" />
+            <Link
+              activeClass="active"
+              to="specifications"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <img className="silver" src={Silver} alt="platinum" />
+            </Link>
           </div>
           <div className="product-text">
             <h1 className="product-name">Silver</h1>
@@ -48,7 +66,16 @@ function Products() {
         </div>
         <div className="unit">
           <div className="unit-section">
-            <img className="clairify-1" src={C1} alt="platinum" />
+            <Link
+              activeClass="active"
+              to="specifications"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <img className="clairify-1" src={C1} alt="platinum" />
+            </Link>
           </div>
           <div className="product-text">
             <h1 className="product-name">Clairify 1</h1>

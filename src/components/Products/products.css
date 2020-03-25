@@ -16,11 +16,20 @@
 .platinum {
   max-width: 20%;
 }
+.platinum:hover {
+  cursor: pointer;
+}
 .silver {
   max-width: 20%;
 }
+.silver:hover {
+  cursor: pointer;
+}
 .clairify-1 {
   max-width: 20%;
+}
+.clairify-1:hover {
+  cursor: pointer;
 }
 
 .product-intro {

@@ -1,5 +1,3 @@
-/* 11111 */
-
 .distributor-form-text {
   text-align: center;
   font-size: 15px;
@@ -23,16 +21,10 @@
   letter-spacing: 3px;
   color: white;
 }
-.distributor-user-bar {
-  margin-top: 150px;
-}
 .distributor-form-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.distributor-results-bar {
-  margin-top: 40px;
 }
 .distributor-user-form {
   display: flex;

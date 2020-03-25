@@ -15,20 +15,10 @@
   color: black;
   text-align: center;
 }
-.user-bar {
-  margin-top: 150px;
-}
 .form-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.results-bar {
-  margin-top: 40px;
-}
-.product-specifications {
-  font-size: 13px;
-  padding: 12px;
 }
 .user-form {
   display: flex;
@@ -52,9 +42,6 @@
   text-align: center;
   margin-top: 30px;
   padding: 5px;
-}
-.product-name {
-  font-size: 20px;
 }
 .form-logo {
   max-width: 75px;
@@ -81,11 +68,13 @@
   margin: 0;
   color: white;
   letter-spacing: 3px;
+  padding: 10px;
 }
 .product-name {
   margin: 1px;
   color: white;
   letter-spacing: 3px;
+  margin-top: 15px;
 }
 .user-bar {
   background-color: #245ca6;

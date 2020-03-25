@@ -58,7 +58,7 @@ class Distributor extends React.Component {
         <div className="distributor-form-intro">
           <img className="distributor-form-logo" src={Claire} alt="platinum" />
           <p className="distributor-form-text">
-            Once you have choosen a product that best fits your needs, please
+            Once you have select a product that best fits your needs, please
             select the region you are nearest to, so that you may contact one of
             our distributors to purchase a product.
           </p>

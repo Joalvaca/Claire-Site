@@ -79,7 +79,7 @@ function Products() {
           </div>
           <div className="product-text">
             <h1 className="product-name">Clairify 1</h1>
-            <p className="product-description">
+            <p className="clairify-description">
               Introducing our Clairify 1 unit, it is perfect for any home, boat
               and recreational vehicle.
             </p>

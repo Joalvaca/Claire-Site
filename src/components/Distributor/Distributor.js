@@ -2,7 +2,6 @@ import React from "react";
 import "./Distributor.css";
 import Claire from "../../images/Claire-logo.png";
 import config from "../../config";
-console.log(config);
 
 class Distributor extends React.Component {
   constructor() {
@@ -17,7 +16,7 @@ class Distributor extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.filterByName = this.filterByName.bind(this);
   }
-
+  //  Gets distributor info from database
   componentDidMount() {
     fetch(`${config.API_ENDPOINT}api/distributors`)
       .then(response => response.json())
@@ -40,6 +39,8 @@ class Distributor extends React.Component {
       this.filterByName(value);
     }
   }
+  // filters distributor data to find region_name that matches one of the options in drop down box
+
   filterByName(name) {
     this.setState(state => {
       return {
@@ -92,6 +93,8 @@ class Distributor extends React.Component {
           <section className="distributor-user-form">
             <div>
               <div className="distributor-unit-result">
+                {/*conditional statement that displays logo, but once user picks options it displays product choosen */}
+
                 {this.state.name === "Select" ? (
                   <img
                     className="distributor-form-results"

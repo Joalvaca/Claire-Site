@@ -17,7 +17,7 @@ class Form extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.filterByName = this.filterByName.bind(this);
   }
-
+  //  Gets products specifications from database
   componentDidMount() {
     fetch(`${config.API_ENDPOINT}api/products`)
       .then(response => response.json())
@@ -40,6 +40,7 @@ class Form extends React.Component {
       this.filterByName(value);
     }
   }
+  // filters product data to find product_name that matches one of the options in drop down box
   filterByName(name) {
     this.setState(state => {
       return {
@@ -90,6 +91,7 @@ class Form extends React.Component {
           <section className="user-form">
             <div>
               <div className="unit-result">
+                {/*conditional statement that displays logo, but once user picks options it displays product choosen */}
                 {this.state.name === "Select" ? (
                   <img className="form-results" src={Claire} alt="platinum" />
                 ) : (
